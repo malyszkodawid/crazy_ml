@@ -25,8 +25,9 @@ urlpatterns = [
     url(r'^dashboard/', views.dashboard, name='dashboard'),
     url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^change_password/$', views.change_password, name='password_change'),
-    url(r'^info/$', views.info, name='info'),
+    url(r'^info/$', views.index, name='info'),
     url(r'^descriptions/$', views.descriptions, name='descriptions'),
+    url(r'^calendar/$', views.calendar, name='calendar'),
 
     url(r'^login/$', user.login, name='login'),
     url(r'^retrieve_password/$', user.retrieve_password, name='password'),

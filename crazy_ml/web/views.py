@@ -21,6 +21,12 @@ def dashboard(request):
 
 @login_required()
 @csrf_exempt
+def calendar(request):
+    return render(request, 'calendar.html', {})
+
+
+@login_required()
+@csrf_exempt
 def descriptions(request):
     return render(request, 'descriptions.html', {'descriptions': Description.objects.filter(author=request.user)})
 
