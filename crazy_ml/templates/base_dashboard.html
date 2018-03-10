@@ -9,8 +9,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/dashboard/AdminLTE.min.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/dashboard/AdminLTE.css' %}">
         <link rel="stylesheet" href="{% static 'css/dashboard/colors.css' %}">
+
         <link rel="stylesheet" href="{% static 'css/dashboard/style_dashboard.css' %}">
         <link rel="stylesheet" href="{% static 'css/dashboard/dropzone.css' %}">
 
@@ -23,7 +25,7 @@
     </head>
 
 
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition skin-red sidebar-mini">
         <div class="wrapper">
             {% include 'menu.html' %}
             {% block main %}
@@ -63,7 +65,6 @@
         <script src="{% static 'js/dashboard/app.min.js' %}"></script>
         <script src="{% static 'js/dashboard/jquery.slimscroll.min.js' %}"></script>
         <script src="{% static 'js/dashboard/fastclick.min.js' %}"></script>
-        <script src="{% static 'js/dashboard/demo.js' %}"></script>
 
     </body>
 
