@@ -411,6 +411,216 @@ create_event(
 	tickets_link = 'https://www.eventbrite.co.uk/e/future-worlds-dragons-den-2018-tickets-43604945566?aff=efbeventtix'
 	)
 
+create_event(
+	id = 25,
+	title = 'Beginners Bachata Salsa Lessons',
+	description = "Come along to our Beginners Bachata lessons! No need to bring a partner!!",
+	category = ['hobbies'],
+	tags = ['on_campus', 'societies', 'dance'],
+	start_date = '08-03-2018 19:00',
+	end_date = '08-03-2018 20:00',
+	place = 'The Cube',
+	organisers = ['Salsa Society Group'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 26,
+	title = 'QuizSoc Tramstop Takeover',
+	description = "An exciting new opportunity for QuizSoc and all\
+    those interested in Pub Quizzes since the Stile closed. What could\
+    be a one-off or the first of many so please come along and take part\
+    at the Tramstop Pub in Portswood. £1 entry. £50 prize for the winners and\
+    other prizes for runners up.",
+	category = ['hobbies', 'contests'],
+	tags = ['city_center', 'societies', 'alohol'],
+	start_date = '08-03-2018 19:45',
+	end_date = '08-03-2018 21:15',
+	place = 'The Tramstop Bar & Kitchen (Portswood Rd, SO17 2NJ)',
+	organisers = ['Quiz Society Group'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 27,
+	title = 'Beginners Crossbody Salsa Lessons',
+	description = "Come along to our Beginners Crossbody Salsa lessons! No need to bring a partner!!",
+	category = ['hobbies'],
+	tags = ['on_campus', 'societies', 'dance'],
+	start_date = '08-03-2018 20:00',
+	end_date = '08-03-2018 21:00',
+	place = 'Activities Room',
+	organisers = ['Salsa Society Group'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 28,
+	title = 'ECSS at the Inter-Society Challenge!',
+	description = "Want to win a quick £200 for you and three mates? Southampton's Quiz Society are running the annual Inter-Society Challenge (ISC), a general knowledge quiz tournament with the chance to win big money for the society you represent! The prize money for the winning team is a sweet £500. If you enter a team representing ECSS (we can enter as many ECSS teams as we like!) and win the ISC, you get to keep £200 of the winnings, with the remaining £300 going into the society budget that allows us to run our events. The Qualifier Round takes place in early February after exams, with an entry fee of £1 per person. After this stage, successful teams are put through to the Knockout Rounds (played on the buzzer) with a £1.50 entry fee per person. ",
+	category = ['contests'],
+	tags = ['on_campus', 'free', 'play'],
+	start_date = '13-12-2017 16:00',
+	end_date = '18-12-2017 12:00',
+	place = 'Highfield Campus',
+	organisers = ['ECSS'],
+	web_link = 'https://www.facebook.com/events/163277347758358/',
+	tickets_link = 'https://docs.google.com/forms/d/1sryNHdTH3azSTH1rwa7hm8Iph9qaG82iFSd6cYhTr18/viewform?edit_requested=true'
+	)
+
+create_event(
+	id = 29,
+	title = 'ECS Christmas Party (Free Drink Included!)',
+	description = "Join us for our final social of the year: the department christmas party! Our bash this year will be in The Bridge, in the main SUSU building. Entry to the event is free, and the dress code is smart casual and upwards, so dress fancy if you want! Please feel welcome to bring friends, but non-ECS students will not be able to get a drink token. The union bars will be open as usual if you wish to buy more drinks and we'll be heading to Portswood when the night ends to continue the party! We look forward to seeing you there for a night of festivity and celebration to close out 2017 :)",
+	category = ['party'],
+	tags = ['on_campus', 'free', 'dance', 'alcohol', 'play', 'food'],
+	start_date = '07-12-2017 18:00',
+	end_date = '07-12-2017 23:00',
+	place = 'The Bridge',
+	organisers = ['ECSS'],
+	web_link = 'https://www.facebook.com/events/360768204344521/',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 30,
+	title = 'TGM + Games Night',
+	description = "It's time for our TGM (Termly General Meeting), followed by a games night! At 7pm, we'll be holding our TGM. This is a chance to hear about what the committee have been up to so far this term, gain an insight into the growth of the society and this term's cash flow, as well as details about what is in store for the rest of this academic year. There will also be a Q&A session, where you'll be able to voice your suggestions about how the society, and our events, are ran. From 8pm, we'll be transitioning to our usual games night in rooms 1065 and 1025 (in the same building), so pop along, play some games and eat some pizza! Whilst the two events are back-to-back, they are unrelated. You can attend either one, or both!",
+	category = ['academic', 'hobbies'],
+	tags = ['on_campus', 'free', 'talk', 'food', 'play'],
+	start_date = '05-12-2017 19:00',
+	end_date = '05-12-2017 22:30',
+	place = '58/1065',
+	organisers = ['ECSS'],
+	web_link = 'https://www.facebook.com/events/811248419079654/',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 31,
+	title = 'Intermediate Crossbody Salsa Lessons',
+	description = "Come along to our Intermediate Crossbody Salsa lessons! No need to bring a partner!!",
+	category = ['hobbies'],
+	tags = ['on_campus', 'societies', 'dance'],
+	start_date = '08-03-2018 21:00',
+	end_date = '08-03-2018 22:00',
+	place = 'Activities Room',
+	organisers = ['Salsa Society Group'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 32,
+	title = 'Karaoke',
+	description = "",
+	category = ['party'],
+	tags = ['on_campus', 'alcohol', 'dance', 'free', 'dance','susu'],
+	start_date = '08-03-2018 20:00',
+	end_date = '09-03-2018 01:00',
+	place = 'The Stags',
+	organisers = ['SUSU'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 33,
+	title = 'CI Careers Session: Media and Advertising Workshop',
+	description = "Curious about the media and advertising industry?\
+    Come along to this workshop with Richard Willis, founder of Talent Works\
+    to find out how to get in to the industry, who you should be networking with,\
+    which roles to aim for and more. It doesn't stop there, Final Year students can\
+    also book a one-to-one with Richard throughout the whole day! You can do this here:\
+    https://www.talent-works.net/book (select Southampton option). Talent Works aim to\
+    advance young talent in media, so this is the perfect opportunity to discuss your desired\
+    career path, consider your options and gain some help and guidance from Richard. \
+    This is a FREE event but spaces are limited. Secure your place here: http://bit.ly/2FfyVqg",
+	category = ['academic'],
+	tags = ['on_campus', 'talk', 'susu'],
+	start_date = '07-03-2018 14:30',
+	end_date = '07-03-2018 15:30',
+	place = 'Building 58, Room 1041 Murray Building',
+	organisers = ['SUSU', 'SUSU Creative Industries Zone'],
+	web_link = '',
+	tickets_link = 'http://bit.ly/2FfyVqg'
+	)
+
+create_event(
+	id = 34,
+	title = 'Learn the Lindy Hop',
+	description = "Come and learn a fun and stylish partner dance! \
+    4pm-5pm: Free Practice Session\
+    5pm-6pm: Beginners' Lindy Hop Lesson\
+    Like our page to keep up to date!",
+	category = ['hobbies'],
+	tags = ['on_campus', 'societies', 'dance'],
+	start_date = '07-03-2018 16:00',
+	end_date = '07-03-2018 18:00',
+	place = 'Union Cafe',
+	organisers = ['Southampton Swing Dancers Group'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 35,
+	title = 'Karate-do Shotokai',
+	description = "Come along to our informal practice sessions to learn self defence and keep fit!",
+	category = ['hobbies', 'sports'],
+	tags = ['on_campus', 'societies'],
+	start_date = '06-03-2018 17:00',
+	end_date = '06-03-2018 19:00',
+	place = 'Activities Room, Union Building (42)',
+	organisers = ['Karate-Do Shotokai Group'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+# create_event(
+# 	id = ,
+# 	title = '',
+# 	description = "",
+# 	category = [],
+# 	tags = [],
+# 	start_date = '17-02-2018 09:00',
+# 	end_date = '17-02-2018 10:00',
+# 	place = '',
+# 	organisers = [''],
+# 	web_link = '',
+# 	tickets_link = ''
+# 	)
+
+# create_event(
+# 	id = ,
+# 	title = '',
+# 	description = "",
+# 	category = [],
+# 	tags = [],
+# 	start_date = '17-02-2018 09:00',
+# 	end_date = '17-02-2018 10:00',
+# 	place = '',
+# 	organisers = [''],
+# 	web_link = '',
+# 	tickets_link = ''
+# 	)
+
+# create_event(
+# 	id = ,
+# 	title = '',
+# 	description = "",
+# 	category = [],
+# 	tags = [],
+# 	start_date = '17-02-2018 09:00',
+# 	end_date = '17-02-2018 10:00',
+# 	place = '',
+# 	organisers = [''],
+# 	web_link = '',
+# 	tickets_link = ''
+# 	)
 
 # create_event(
 # 	id = ,
