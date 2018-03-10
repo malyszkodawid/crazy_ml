@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^info/$', views.index, name='info'),
     url(r'^descriptions/$', views.descriptions, name='descriptions'),
     url(r'^calendar/$', views.calendar, name='calendar'),
+    url(r'^write_json/$', views.write_json, name='write_json'),
 
     url(r'^login/$', user.login, name='login'),
     url(r'^retrieve_password/$', user.retrieve_password, name='password'),

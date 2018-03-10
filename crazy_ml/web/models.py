@@ -1,5 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User    
+import json
+import os
 
 
 class Group(models.Model):
@@ -38,16 +40,27 @@ class Profile(models.Model):
             return 'Male'
 
         return 'Female'
+  
+class Tag(models.Model):
+    tag = models.TextField(max_length=300, blank=True)
     
-class Events(models.Model):
+    
+class Category(models.Model):
+    category = models.CharField(max_length=100, blank=True)
+    
+    
+class Event(models.Model):
     i_d = models.CharField(max_length=20, blank=False)
     title = models.TextField(max_length=250, blank=False)
     description = models.TextField(max_length=1000, blank=True)
-    category = models.CharField(max_length=100, blank=True)
-    tags = models.TextField(max_length=300, blank=True)
+    categories = models.ManyToManyField(Category)
+    tags = models.ManyToManyField(Tag)
     start_date = models.CharField(max_length=100, blank=True)
     end_date = models.CharField(max_length=100, blank=True)
     place = models.CharField(max_length=100, blank=True)
     organisers = models.CharField(max_length=250, blank=True)
     web_link = models.CharField(max_length=250, blank=True)
     tickets_link = models.CharField(max_length=250, blank=True)
+    
+
+    
