@@ -6,122 +6,13 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Dashboard
-        <small>Description creator</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="{% url 'dashboard' %}"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
-      </ol>
-    </section>
 
     <!-- Main content -->
     <section class="content">
         <div class="row">
         <!-- /.col -->
-        <div class="col-md-7">
-            <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Description</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="form-group" id="results_recording">
-                <div class="form-control fake-textarea" name="fake-textarea[]" id="first_recording" contenteditable>Start speaking ...</div>
-                <input id="copy_textarea" style="position:absolute; left:-9999px; top:0px">
-              </div>
-            </div>
-            <form action="server.cgi" method="post" enctype="multipart/form-data" hidden>
-              <input type="file" name="audio" accept="audio/*" capture>
-              <input value="Upload">
-            </form>
-            <div id="recording" style="text-align:center" hidden>
-              <img src="{% static 'images/recording.png' %}" style="height:80px">
-            </div>
-            <div class="box-footer" style="border-top:none; text-align:center; padding-bottom:40px">
-              <button type="reset" class="btn btn-success btn-lg" id="record" value="0"><i class="fa fa-microphone"></i> Record (Space)</button>
-            </div>
-            <div class="box-footer">
-              <div class="pull-right">
-                <button type="reset" class="btn btn-default" id="copy"><i id="copy_icon" class="fa fa-copy"></i> Copy to Clipboard</button>
-                <button type="submit" class="btn btn-primary" id="send"><i class="fa fa-envelope-o"></i> Send (Next)</button>
-              </div>
-              <button type="reset" class="btn btn-danger" id="discard"><i class="fa fa-times"></i> Discard</button>
-            </div>
-            <!-- /.box-footer -->
-          </div>
-        </div>
-                  <div class="col-md-5">
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Quick Sentences</h3>
-              <!-- /.box-tools -->
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-              <div class="mailbox-controls">
-                <!-- Check all button -->
-                <button type="button" class="btn btn-default btn-sm checkbox-toggle" id="check"><i id='check-ic' class="fa fa-square-o"></i>
-                </button>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-sm" id="trash"><i class="fa fa-trash-o"></i></button>
-                </div>
-                <!-- /.btn-group -->
-                <div class="pull-right">
-                  1-50/200
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
-                  </div>
-                  <!-- /.btn-group -->
-                </div>
-                <!-- /.pull-right -->
-              </div>
-              <div class="table-responsive mailbox-messages">
-                <table class="table table-hover table-striped" style="font-size:14px">
-                  <colgroup>
-                     <col span="1">
-                     <col span="1" style="width: 25%;">
-                     <col span="1" style="width: 50%;">
-                     <col span="1" style="width: 22%;">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <td></td>
-                      <td>Activator</td>
-                      <td>Sentenece</td>
-                      <td>Modified</td>
-                    </tr>
-                  </thead>
-                  <tbody id="spells">
-                  <div id="token" hidden>{{ csrf_token }}</div>
-                  {% for spell in spells %}
-                  <tr id="{{spell.id}}" time="{{spell.created_date|date:'c'}}">
-                    <td><input type="checkbox" class="check-box"></td>
-                    <td class="mailbox-name"><input name="activator[]" class="value" value="{{ spell.activator }}"/></td>
-                    <td class="mailbox-subject"><input name="text[]" class="value" value="{{ spell.text }}"/></td>
-                    <td class="mailbox-date"><div class="time">{{ spell.time }}</div></td>
-                  </tr>
-                  {% endfor %}
-                  </tbody>
-                </table>
-                <!-- /.table -->
-              </div>
-              <!-- /.mail-box-messages -->
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-              <div class="mailbox-controls">
-                <div class="pull-right" id="place">
-                  <button type="button" id="new" class="btn btn-primary"><i class="fa fa-plus"></i> Add New</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-12">
 
-          <!-- /.box -->
         </div>
         <!-- /.col -->
       </div>
