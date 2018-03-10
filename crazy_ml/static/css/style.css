@@ -1,0 +1,83 @@
+@font-face { font-family: beaver; src: url('../fonts/beaver.ttf'); }
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.page-style {
+	background-attachment:inherit;
+	background-position:50% 0;
+	background-repeat:no-repeat;
+	margin:0 auto;
+	width:100%;
+	background-size:cover;
+	background-image: url("../images/temp.jpeg");
+}
+
+.pattern {
+	background:rgba(0,0,0,.5) url(../images/pattern.png);
+}
+
+.site-title{
+	text-align:center;
+	font-size:110px;
+	font-family:'beaver';
+	color: #fff;
+	position:relative;
+}
+
+.alpha {
+    position:relative;
+    margin-top:-30px;
+    color:white;
+    float:right;
+}
+
+.font-title {
+    height:150px;
+    position:relative;
+}
+
+#user-name-modal {
+    text-align: center;
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#email-modal {
+    text-align:center;
+    margin-top:10px;
+}
+
+.modal-dialog {
+    vertical-align: middle;
+    border-radius: 2px 2px 5px 5px !important;
+    width: 20% !important;
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top:26%;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+#loader {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 216px;
+   height: 216px;
+   margin-top: -108px; /* Half the height */
+   margin-left: -108px; /* Half the width */
+}

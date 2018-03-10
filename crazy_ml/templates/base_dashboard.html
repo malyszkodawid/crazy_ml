@@ -1,0 +1,70 @@
+{% load staticfiles %}
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Uni - find something</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/dashboard/AdminLTE.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/dashboard/_all-skins.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/dashboard/style_dashboard.css' %}">
+        <link rel="stylesheet" href="{% static 'css/dashboard/dropzone.css' %}">
+
+
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/dashboard/dropzone.js' %}"></script>
+
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}">
+    </head>
+
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <div class="wrapper">
+            {% include 'menu.html' %}
+            {% block main %}
+            {% endblock %}
+              <!-- Control Sidebar -->
+              <aside class="control-sidebar control-sidebar-dark">
+                <!-- Create the tabs -->
+                <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <!-- Home tab content -->
+                  <div class="tab-pane" id="control-sidebar-home-tab">
+                  </div>
+                  <!-- /.tab-pane -->
+                  <!-- Stats tab content -->
+                  <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+                  <!-- /.tab-pane -->
+                  <!-- Settings tab content -->
+                  <div class="tab-pane" id="control-sidebar-settings-tab">
+                  </div>
+                  <!-- /.tab-pane -->
+                </div>
+              </aside>
+              <!-- /.control-sidebar -->
+              <!-- Add the sidebar's background. This div must be placed
+                   immediately after the control sidebar -->
+              <div class="control-sidebar-bg"></div>
+              <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                  <b>Version</b> 0.1
+                </div>
+                <strong style="color:transparent;">.</strong>
+              </footer>
+        </div>
+
+        <script src="{% static 'js/dashboard/app.min.js' %}"></script>
+        <script src="{% static 'js/dashboard/jquery.slimscroll.min.js' %}"></script>
+        <script src="{% static 'js/dashboard/fastclick.min.js' %}"></script>
+        <script src="{% static 'js/dashboard/demo.js' %}"></script>
+
+    </body>
+
+</html>

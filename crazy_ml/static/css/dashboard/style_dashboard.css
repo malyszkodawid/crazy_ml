@@ -1,0 +1,66 @@
+@font-face { font-family: beaver; src: url('../../fonts/beaver.ttf'); }
+
+
+.site-title{
+	font-family:'beaver'!important;
+}
+
+.fake-textarea {
+    border:none!important;
+    font-size:17px;
+    padding-top:10px;
+}
+
+.value {
+    border:none;
+    background:transparent;
+    width:100%;
+}
+
+.hidden {
+    display:none;
+}
+
+.show {
+    display:block;
+}
+
+.value:focus {
+    outline: none;
+}
+
+.tab-header {
+    border-bottom:1px solid #d2d6de;
+    color:#555;
+}
+
+.header-text {
+    color:#555;
+    font-weight:bold;
+}
+
+.header-text:hover {
+    color:#555;
+    font-weight:bold;
+}
+
+.header-text:clicked {
+    color:#555;
+    font-weight:bold;
+}
+
+.header-text:focus {
+    color:#555;
+    font-weight:bold;
+}
+
+.general-tab {
+    border:1px solid #d2d6de;
+    padding:none;
+
+}
+
+.padding-tab {
+    padding-left: 20px;
+    padding-right:20px;
+}
