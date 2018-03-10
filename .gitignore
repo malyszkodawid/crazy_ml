@@ -1,5 +1,7 @@
 venv
 *.DS_Store
 *.pyc
-__pycache__
+crazy_ml/crazy_ml/__pycache__
 .idea
+crazy_ml/db.sqlite3
+crazy_ml/web/migrations/*

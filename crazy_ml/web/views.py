@@ -7,6 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 def index(request):
     if request.user.is_authenticated:
         return dashboard(request)
+
     return render(request, 'index.html')
 
 
@@ -27,7 +28,7 @@ def descriptions(request):
 @login_required()
 @csrf_exempt
 def info(request):
-    return render(request, 'info.html')
+    return render(request, 'questionnaire.html')
 
 
 @login_required()
