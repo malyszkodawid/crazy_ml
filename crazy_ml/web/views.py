@@ -18,8 +18,8 @@ def index(request):
 @login_required()
 @csrf_exempt
 def dashboard(request):
-    if not request.user.profile.customized:
-        return info(request)
+    #if not request.user.profile.customized:
+    #    return info(request)
     return render(request, 'dashboard.html', {})
 
 
@@ -27,12 +27,6 @@ def dashboard(request):
 @csrf_exempt
 def calendar(request):
     return render(request, 'calendar.html', {})
-
-
-@login_required()
-@csrf_exempt
-def calendar(request):
-    return render(request, 'events.html', {})
 
 
 @csrf_exempt
@@ -52,13 +46,38 @@ def descriptions(request):
 @login_required()
 @csrf_exempt
 def info(request):
-    return render(request, 'questionnaire.html')
+    return render(request, 'questionnaire.html', )
 
 
 @login_required()
 @csrf_exempt
 def change_password(request):
     return render(request, 'password_change.html')
+
+
+@login_required()
+@csrf_exempt
+def events(request):
+    data = {}
+    data['events'] = Event.objects.all()
+    return render(request, 'events.html', data)
+
+
+@login_required()
+@csrf_exempt
+def event(request, event_id):
+    data = {}
+    data['event'] = Event.objects.get(pk=event_id)
+    return render(request, 'event.html', data)
+
+
+@login_required()
+@csrf_exempt
+def person(request, person_name):
+    data = {}
+    data['user'] = User.objects.get(username=person_name).profile
+
+    return render(request, 'user.html', data)
 
 
 @login_required()
