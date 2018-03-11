@@ -526,6 +526,10 @@ a:focus {
 .sidebar-menu > li > a > .glyphicon,
 .sidebar-menu > li > a > .ion {
   width: 20px;
+  color:#ff8966;
+}
+.sidebar-menu > li > a > span {
+  color:#ff8966;
 }
 .sidebar-menu > li .label,
 .sidebar-menu > li .badge {
