@@ -13,11 +13,12 @@
                 <form class="login" method="post" action="/login/">
                     {% csrf_token %}
                     <p class="title">Log in</p>
-                    <input type="text" placeholder="Username" autofocus name="user" id="user-name"/>
-                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Email" autofocus name="user" id="user-name"/>
+                    <i class="fa fa-at"></i>
                     <input type="password" placeholder="Password" name="password"/>
                     <i class="fa fa-key"></i>
                     <a href="#" data-toggle="modal" id="modal-open" data-target="#password-modal">Forgot your password?</a>
+                    <a href="{% url 'signup' %}" style="float:right">Sign up</a>
                     {% if messages %}
                         {% for message in messages %}
                             <p id="message_post" class="{{ message.tags }}">{{ message }}</p>

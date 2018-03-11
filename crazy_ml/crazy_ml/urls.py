@@ -28,8 +28,13 @@ urlpatterns = [
     url(r'^info/$', views.index, name='info'),
     url(r'^descriptions/$', views.descriptions, name='descriptions'),
     url(r'^calendar/$', views.calendar, name='calendar'),
+
+    url(r'^calendar/$', views.calendar, name='events'),
+    url(r'^signup/$', views.signup, name='signup'),
+
     url(r'^write_json/$', views.write_json, name='write_json'),
 
+    url(r'^sign_up/$', user.sign_up, name='login'),
     url(r'^login/$', user.login, name='login'),
     url(r'^retrieve_password/$', user.retrieve_password, name='password'),
     url(r'^password/$', user.password, name='password_change_post'),

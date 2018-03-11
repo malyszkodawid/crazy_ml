@@ -18,7 +18,7 @@ def index(request):
 @login_required()
 @csrf_exempt
 def dashboard(request):
-    if request.user.last_login is None:
+    if not request.user.profile.customized:
         return info(request)
     return render(request, 'dashboard.html', {})
 
@@ -27,6 +27,20 @@ def dashboard(request):
 @csrf_exempt
 def calendar(request):
     return render(request, 'calendar.html', {})
+
+
+@login_required()
+@csrf_exempt
+def calendar(request):
+    return render(request, 'events.html', {})
+
+
+@csrf_exempt
+def signup(request):
+    if request.user.is_authenticated:
+        return render(request, 'dashboard.html')
+
+    return render(request, 'signup.html', {})
 
 
 @login_required()

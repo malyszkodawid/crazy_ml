@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'web',
 ]
 FIXTURE_DIRS = 'fixtures/'
-
+AUTH_PROFILE_MODULE = 'web.Profile'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
