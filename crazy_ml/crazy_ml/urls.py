@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^signup/$', views.signup, name='signup'),
 
     url(r'^write_json/$', views.write_json, name='write_json'),
+    url(r'^make_users/$', views.make_users, name='make_users'),
 
     url(r'^sign_up/$', user.sign_up, name='login'),
     url(r'^login/$', user.login, name='login'),

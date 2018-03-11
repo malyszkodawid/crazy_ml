@@ -124,3 +124,41 @@ def write_json(requests):
                 e.categories.add(c)
                 
             e.save()
+
+
+@login_required()
+@csrf_exempt
+def make_users(request):
+    
+    u = User(username = 'Yustina')
+    u.save()
+    user_profile = u.profile   
+    for tag_name in ['alcohol', 'food', 'free','dance']:       
+        tag = Tag.objects.get(tag=tag_name)
+        user_profile.tags.add(tag)
+    user_profile.save()
+    
+    u = User(username = 'Eirini')
+    u.save()
+    user_profile = u.profile  
+    for tag_name in ['alcohol', 'food', 'free', 'movie', 'dance']:
+        tag = Tag.objects.get(tag=tag_name)
+        user_profile.tags.add(tag)
+    user_profile.save()
+    
+    u = User(username = 'Aswin')
+    u.save()
+    user_profile = u.profile  
+    for tag_name in ['talk', 'play', 'religion']:
+        tag = Tag.objects.get(tag=tag_name)
+        user_profile.tags.add(tag)
+    user_profile.save()
+    
+    u = User(username = 'Shreevatsa')
+    u.save()
+    user_profile = u.profile  
+    for tag_name in ['talk', 'play', 'societies']:
+        tag = Tag.objects.get(tag=tag_name)
+        user_profile.tags.add(tag)
+    user_profile.save()
+    
