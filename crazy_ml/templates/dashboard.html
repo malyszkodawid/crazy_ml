@@ -88,7 +88,7 @@
                   </div>
 
                   <div class = "caption">
-                      <a href="{% url 'event_view' main_recomendation.id %}"><h3 style="font-size:14px">{{ event.title }}</h3></a>
+                      <a href="{% url 'event_view' event.id %}"><h3 style="font-size:14px">{{ event.title }}</h3></a>
                      <p>{{ event.date }}</p>
 
 
@@ -96,6 +96,7 @@
                </div>
                 {% endfor %}
             </div>
+        </div>
         </div>
     </section>
     <!-- /.content -->
