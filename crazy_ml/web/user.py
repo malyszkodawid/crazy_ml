@@ -11,7 +11,7 @@ from django.http import *
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
-
+from web.views import dashboard
 
 @login_required()
 @csrf_exempt
@@ -110,7 +110,7 @@ def sign_up(request):
 
         u = authenticate(username=username, password=user_password)
         auth_login(request, u)
-        return render(request, 'dashboard.html')
+        return dashboard(request)
 
     return redirect('/signup')
 
