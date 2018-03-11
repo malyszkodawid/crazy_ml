@@ -1,7 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.contrib.auth.models import User
 
 
 class Group(models.Model):
@@ -48,3 +48,25 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
     instance.profile.save()
+
+  
+class Tag(models.Model):
+    tag = models.TextField(max_length=300, blank=True)
+    
+    
+class Category(models.Model):
+    category = models.CharField(max_length=100, blank=True)
+    
+    
+class Event(models.Model):
+    i_d = models.CharField(max_length=20, blank=False)
+    title = models.TextField(max_length=250, blank=False)
+    description = models.TextField(max_length=1000, blank=True)
+    categories = models.ManyToManyField(Category)
+    tags = models.ManyToManyField(Tag)
+    start_date = models.CharField(max_length=100, blank=True)
+    end_date = models.CharField(max_length=100, blank=True)
+    place = models.CharField(max_length=100, blank=True)
+    organisers = models.CharField(max_length=250, blank=True)
+    web_link = models.CharField(max_length=250, blank=True)
+    tickets_link = models.CharField(max_length=250, blank=True)
