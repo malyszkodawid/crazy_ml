@@ -27,7 +27,6 @@
               <li class="user-header">
                 <img src="{% static 'images/user.png' %}" class="img-circle" alt="User Image">
 
-
                 <p>
                   {{ user.get_full_name|default:user.username }} - Alpha Tester
                   <small>Member since {{ user.date_joined|date:"M. Y" }}</small>
@@ -87,12 +86,6 @@
       </ul>
       <div style="padding:80px" class="hidden-sm"></div>
       <div id="statistics">
-      <div class="col-xs-12">
-          <!-- small box -->
-          <div class="small-box" style="height:300px; width:100%; background-image:url('{% static 'images/food.jpg' %}');">
-
-          </div>
-        </div>
       </div>
     </section>
     <!-- /.sidebar -->

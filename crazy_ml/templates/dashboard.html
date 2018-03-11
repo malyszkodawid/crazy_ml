@@ -11,16 +11,16 @@
     <section class="content">
         <div class="row">
         <!-- /.col -->
-        <div class="col-md-6">
+            <div class="col-md-8">
 
-               <div class = "col-sm-6 col-md-3">
-                  <div class = "thumbnail">
+               <div class = "col-sm-6">
+                  <div class = "thumbnail" style="background-color:transparent;border:none">
                      <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
                   </div>
 
                   <div class = "caption">
-                     <h3>Thumbnail label</h3>
-                     <p>Some sample text. Some sample text.</p>
+                     <a href="{% url 'event_view' main_recomendation.id %}"><h3>{{ main_recomendation.title }}</h3></a>
+                     <p>{{ main_recomendation.description|truncatechars:300 }}...</p>
 
                      <p>
                         <a href = "#" class = "btn btn-primary" role = "button">
@@ -35,14 +35,15 @@
                   </div>
                </div>
 
+                {% for event in recomendations %}
                <div class = "col-sm-6 col-md-3">
-                  <div class = "thumbnail">
+                  <div class = "thumbnail" style="background-color:transparent;border:none">
                      <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
                   </div>
 
                   <div class = "caption">
-                     <h3>Thumbnail label</h3>
-                     <p>Some sample text. Some sample text.</p>
+                      <a href="{% url 'event_view' main_recomendation.id %}"><h3 style="font-size:14px">{{ event.title }}</h3></a>
+                     <p>{{ event.start_date }}</p>
 
                      <p>
                         <a href = "#" class = "btn btn-primary" role = "button">
@@ -56,147 +57,46 @@
 
                   </div>
                </div>
-
-               <div class = "col-sm-6 col-md-3">
-                  <div class = "thumbnail">
-                     <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
-                  </div>
-
-                  <div class = "caption">
-                     <h3>Thumbnail label</h3>
-                     <p>Some sample text. Some sample text.</p>
-
-                     <p>
-                        <a href = "#" class = "btn btn-primary" role = "button">
-                           Button
-                        </a>
-
-                        <a href = "#" class = "btn btn-default" role =" button">
-                           Button
-                        </a>
-                     </p>
-
-                  </div>
-               </div>
-
-               <div class = "col-sm-6 col-md-3">
-                  <div class = "thumbnail">
-                     <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
-                  </div>
-
-                  <div class = "caption">
-                     <h3>Thumbnail label</h3>
-                     <p>Some sample text. Some sample text.</p>
-
-                     <p>
-                        <a href = "#" class = "btn btn-primary" role = "button">
-                           Button
-                        </a>
-
-                        <a href = "#" class = "btn btn-default" role = "button">
-                           Button
-                        </a>
-                     </p>
-
-                  </div>
+                {% endfor %}
             </div>
 
+        <div class="col-md-4">
+            <div class="row">
 
+                {% for user in users %}
+                <div class="col-md-6">
+                    <div class="user-panel">
+                    <div class="pull-left image image2">
+                      <img src="{% static 'images/user.png' %}" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info2">
+                        <a href="{% url 'person_view' user.username %}"><p>{{ user.get_full_name|default:user.username }}</p></a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
         </div>
-
         <!-- /.col -->
       </div>
         <div class="row">
         <!-- /.col -->
-        <div class="col-md-6">
-
-               <div class = "col-sm-6 col-md-3">
-                  <div class = "thumbnail">
+        <div class="col-md-12" style="height:70%">
+                {% for event in events %}
+               <div class = "col-sm-2">
+                  <div class = "thumbnail" style="background-color:transparent;border:none">
                      <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
                   </div>
 
                   <div class = "caption">
-                     <h3>Thumbnail label</h3>
-                     <p>Some sample text. Some sample text.</p>
+                      <a href="{% url 'event_view' main_recomendation.id %}"><h3 style="font-size:14px">{{ event.title }}</h3></a>
+                     <p>{{ event.date }}</p>
 
-                     <p>
-                        <a href = "#" class = "btn btn-primary" role = "button">
-                           Button
-                        </a>
-
-                        <a href = "#" class = "btn btn-default" role = "button">
-                           Button
-                        </a>
-                     </p>
 
                   </div>
                </div>
-
-               <div class = "col-sm-6 col-md-3">
-                  <div class = "thumbnail">
-                     <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
-                  </div>
-
-                  <div class = "caption">
-                     <h3>Thumbnail label</h3>
-                     <p>Some sample text. Some sample text.</p>
-
-                     <p>
-                        <a href = "#" class = "btn btn-primary" role = "button">
-                           Button
-                        </a>
-
-                        <a href = "#" class = "btn btn-default" role = "button">
-                           Button
-                        </a>
-                     </p>
-
-                  </div>
-               </div>
-
-               <div class = "col-sm-6 col-md-3">
-                  <div class = "thumbnail">
-                     <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
-                  </div>
-
-                  <div class = "caption">
-                     <h3>Thumbnail label</h3>
-                     <p>Some sample text. Some sample text.</p>
-
-                     <p>
-                        <a href = "#" class = "btn btn-primary" role = "button">
-                           Button
-                        </a>
-
-                        <a href = "#" class = "btn btn-default" role =" button">
-                           Button
-                        </a>
-                     </p>
-
-                  </div>
-               </div>
-
-               <div class = "col-sm-6 col-md-3">
-                  <div class = "thumbnail">
-                     <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
-                  </div>
-
-                  <div class = "caption">
-                     <h3>Thumbnail label</h3>
-                     <p>Some sample text. Some sample text.</p>
-
-                     <p>
-                        <a href = "#" class = "btn btn-primary" role = "button">
-                           Button
-                        </a>
-
-                        <a href = "#" class = "btn btn-default" role = "button">
-                           Button
-                        </a>
-                     </p>
-
-                  </div>
-   </div>
+                {% endfor %}
+            </div>
+        </div>
     </section>
     <!-- /.content -->
   </div>
