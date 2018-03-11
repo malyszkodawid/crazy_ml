@@ -83,9 +83,8 @@ class Event(models.Model):
     photos = models.CharField(max_length=250, blank=True)
 
 
-
 class Rating(models.Model):
     user_id = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=True, null=True)
     event_id = models.ForeignKey(Event, on_delete=models.CASCADE, blank=True, null=True)
-    rating = models.IntegerField(blank=False) 
->>>>>>> e789d6825e8b5e346e5ee9a751f3fad9c6337965
+    rating = models.IntegerField(blank=False)
+
