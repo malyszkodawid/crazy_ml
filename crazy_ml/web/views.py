@@ -94,7 +94,8 @@ def event(request, event_id):
 @csrf_exempt
 def person(request, person_name):
     data = {}
-    data['user'] = User.objects.get(username=person_name).profile
+    data['user_data'] = User.objects.get(username=person_name)
+    data['user_profile'] = User.objects.get(username=person_name).profile
 
     return render(request, 'user.html', data)
 
