@@ -10,6 +10,7 @@ import random
 from django.http import *
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
 
 
 @login_required()
@@ -45,7 +46,7 @@ def login(request):
             return redirect('/')
 
         auth_login(request, user)
-        return render(request, 'dashboard.html')
+        return redirect('/dashboard/')
 
     return redirect('/')
 
@@ -112,3 +113,21 @@ def sign_up(request):
         return render(request, 'dashboard.html')
 
     return redirect('/signup')
+
+
+@csrf_exempt
+def update_user(request):
+    if request.method == 'POST' and request.is_ajax():
+
+
+        user_data = request.POST.get('user')
+
+        user = request.user
+
+        user.profile.customized = True
+
+        user.save()
+
+        return JsonResponse({'foo':'bar'})
+
+    return redirect('/')

@@ -18,8 +18,8 @@ def index(request):
 @login_required()
 @csrf_exempt
 def dashboard(request):
-    #if not request.user.profile.customized:
-    #    return info(request)
+    if not request.user.profile.customized:
+        return info(request)
 
     data = dict()
 
@@ -60,7 +60,12 @@ def descriptions(request):
 @login_required()
 @csrf_exempt
 def info(request):
-    return render(request, 'questionnaire.html', )
+
+    data = dict()
+
+    data['tags'] = Tag.objects.all()
+
+    return render(request, 'questionnaire.html', data)
 
 
 @login_required()
