@@ -22,12 +22,23 @@ class School(models.Model):
     text = models.TextField(max_length=1000, blank=True)
 
 
+class Tag(models.Model):
+    tag = models.TextField(max_length=300, blank=True)
+    
+    
+class Category(models.Model):
+    category = models.CharField(max_length=100, blank=True)
+
+
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     photo = models.ImageField(upload_to='profiles')
     is_male = models.BooleanField(default=True)
     school = models.ForeignKey(School, on_delete=models.CASCADE, blank=True, null=True)
     customized = models.BooleanField(default=False)
+    
+    cluster = models.IntegerField(default=0)
+    tags = models.ManyToManyField(Tag)
 
     nationality = models.CharField(max_length=30, blank=True)
     birth_date = models.DateField(null=True, blank=True)
@@ -55,14 +66,6 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
     instance.profile.save()
-
-  
-class Tag(models.Model):
-    tag = models.TextField(max_length=300, blank=True)
-    
-    
-class Category(models.Model):
-    category = models.CharField(max_length=100, blank=True)
     
     
 class Event(models.Model):
@@ -78,3 +81,11 @@ class Event(models.Model):
     web_link = models.CharField(max_length=250, blank=True)
     tickets_link = models.CharField(max_length=250, blank=True)
     photos = models.CharField(max_length=250, blank=True)
+
+
+
+class Rating(models.Model):
+    user_id = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=True, null=True)
+    event_id = models.ForeignKey(Event, on_delete=models.CASCADE, blank=True, null=True)
+    rating = models.IntegerField(blank=False) 
+>>>>>>> e789d6825e8b5e346e5ee9a751f3fad9c6337965
