@@ -54,7 +54,9 @@
                     <fieldset>
                     <h2 class="fs-title">Intrests</h2>
                     <h3 class="fs-subtitle">Choose things you are intrested in!</h3>
-                        some tags
+                        {% for tag in tags %}
+                            {{ tag }}
+                        {% endfor %}
                     <input type="button" name="previous" class="previous action-button" value="Previous" />
                     <input type="submit" name="submit" class="submit action-button" value="Submit" />
                     </fieldset>

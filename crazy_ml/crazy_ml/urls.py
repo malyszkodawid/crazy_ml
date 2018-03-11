@@ -29,7 +29,6 @@ urlpatterns = [
     url(r'^descriptions/$', views.descriptions, name='descriptions'),
     url(r'^calendar/$', views.calendar, name='calendar'),
 
-    url(r'^calendar/$', views.calendar, name='events'),
     url(r'^signup/$', views.signup, name='signup'),
 
     url(r'^write_json/$', views.write_json, name='write_json'),
@@ -38,4 +37,10 @@ urlpatterns = [
     url(r'^login/$', user.login, name='login'),
     url(r'^retrieve_password/$', user.retrieve_password, name='password'),
     url(r'^password/$', user.password, name='password_change_post'),
+
+
+    url('^events/$', views.events, name='events'),
+    url('^event/(?P<event_id>\d+)/$', views.event, name='event_view'),
+
+    url('^person/(?P<person_name>\w+)/$', views.person, name='person_view'),
 ]

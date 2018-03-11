@@ -42,6 +42,13 @@ class Profile(models.Model):
 
         return 'Female'
 
+    def get_photo(self):
+
+        if self.photo and hasattr(self.photo, 'url'):
+            return self.image.url
+
+        return 'static/images/user.png'
+
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
