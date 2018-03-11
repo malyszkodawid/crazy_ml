@@ -59,11 +59,13 @@ def write_json(requests):
             
             for tag_name in event['tags']:
                 if not Tag.objects.filter(tag=tag_name).exists():
-                    Tag.objects.create(tag=tag_name)
+                    t = Tag(tag=tag_name)
+                    t.save()
                     
             for ctg_name in event['category']:
                 if not Category.objects.filter(category=ctg_name).exists():
-                    Category.objects.create(category=ctg_name)
+                    c = Category(category=ctg_name)
+                    c.save()
             
 
             e = Event(i_d = event['id'],
@@ -88,6 +90,4 @@ def write_json(requests):
                 c = Category.objects.get(category=ctg_name)
                 e.categories.add(c)
                 
-            #e.save()
-                
-                
+            e.save()
