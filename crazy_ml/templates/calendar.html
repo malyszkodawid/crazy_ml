@@ -19,8 +19,10 @@
     </section>
     <!-- /.content -->
   </div>
-
-
+<input type="hidden" id="myVar" name="variable" value="{{ events }}">
+<script type="text/javascript">
+    var a = JSON.parse("{{ events|escapejs }}");
+</script>
 
 <script src="{% static 'js/dashboard/jquery.timeago.js' %}"></script>
 

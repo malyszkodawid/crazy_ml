@@ -40,7 +40,21 @@ def dashboard(request):
 @login_required()
 @csrf_exempt
 def calendar(request):
-    return render(request, 'calendar.html', {})
+
+    data = dict()
+    events = list(Event.objects.values('title', 'start_date', 'end_date', 'id'))
+    from datetime import datetime
+    for event in events:
+
+        start = datetime.strptime(event.pop('start_date').replace('at ', ''), '%d-%m-%Y %H:%M')
+        end = datetime.strptime(event.pop('end_date').replace('at ', ''), '%d-%m-%Y %H:%M')
+
+        event['start'] = start.strftime('%Y-%m-%dT%H:%M:00')
+        event['end'] = end.strftime('%Y-%m-%dT%H:%M:00')
+        event['url'] = 'http://127.0.0.1:8000/event/%s' % event['id']
+        #print(event['start'], event['end'])
+    data['events'] = json.dumps(events)
+    return render(request, 'calendar.html', data)
 
 
 @csrf_exempt
