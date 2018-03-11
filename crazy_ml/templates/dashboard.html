@@ -15,7 +15,7 @@
 
                <div class = "col-sm-6">
                   <div class = "thumbnail" style="background-color:transparent;border:none">
-                     <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
+                     <img src = "http://127.0.0.1:8000/{{ main_recomendation.photos }}" alt = "Generic placeholder thumbnail">
                   </div>
 
                   <div class = "caption">
@@ -38,11 +38,11 @@
                 {% for event in recomendations %}
                <div class = "col-sm-6 col-md-3">
                   <div class = "thumbnail" style="background-color:transparent;border:none">
-                     <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
+                     <img src = "http://127.0.0.1:8000/{{ event.photos }}" alt = "Generic placeholder thumbnail">
                   </div>
 
                   <div class = "caption">
-                      <a href="{% url 'event_view' main_recomendation.id %}"><h3 style="font-size:14px">{{ event.title }}</h3></a>
+                      <a href="{% url 'event_view' event.id %}"><h3 style="font-size:14px">{{ event.title }}</h3></a>
                      <p>{{ event.start_date }}</p>
 
                      <p>
@@ -80,11 +80,11 @@
       </div>
         <div class="row">
         <!-- /.col -->
-        <div class="col-md-12" style="height:70%">
+        <div class="col-md-12">
                 {% for event in events %}
                <div class = "col-sm-2">
                   <div class = "thumbnail" style="background-color:transparent;border:none">
-                     <img src = "{% static 'images/food.jpg' %}" alt = "Generic placeholder thumbnail">
+                     <img src = "http://127.0.0.1:8000/{{ event.photos }}" alt = "Generic placeholder thumbnail">
                   </div>
 
                   <div class = "caption">

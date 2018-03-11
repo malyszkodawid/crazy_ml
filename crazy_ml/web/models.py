@@ -77,3 +77,4 @@ class Event(models.Model):
     organisers = models.CharField(max_length=250, blank=True)
     web_link = models.CharField(max_length=250, blank=True)
     tickets_link = models.CharField(max_length=250, blank=True)
+    photos = models.CharField(max_length=250, blank=True)
