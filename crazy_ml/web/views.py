@@ -20,7 +20,21 @@ def index(request):
 def dashboard(request):
     #if not request.user.profile.customized:
     #    return info(request)
-    return render(request, 'dashboard.html', {})
+
+    data = dict()
+
+    events = Event.objects.all()
+    data['main_recomendation'] = events[0]
+
+    data['recomendations'] = events[1:5]
+
+    users = User.objects.all()
+
+    data['users'] = users[:6]
+
+    data['events'] = events[5:11]
+
+    return render(request, 'dashboard.html', data)
 
 
 @login_required()
