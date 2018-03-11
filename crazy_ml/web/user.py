@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, logout
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import login as auth_login
 from django.contrib.auth.models import User
+from web.models import Profile
 from django.core.mail import EmailMessage
 from django.contrib import messages
 import string
@@ -75,3 +76,39 @@ def retrieve_password(request):
                                 safe=False)
 
         return JsonResponse({'message': 'New password has been sent to your email!', 'type': 'good'}, safe=False)
+
+
+@csrf_exempt
+def sign_up(request):
+    if request.method == 'POST':
+
+        username = request.POST['user']
+        user_password = request.POST['password']
+        user_password2 = request.POST['password2']
+
+        print(username)
+
+        if user_password != user_password2:
+            messages.error(request, "Password should be the same!")
+            return redirect('/signup')
+
+        print(User.objects.all())
+
+        if User.objects.filter(username=username).exists():
+            messages.error(request, "This user already exists!")
+            return redirect('/signup')
+
+        try:
+            user = User.objects.create_user(username=username, password=user_password)
+            user.is_superuser = False
+            user.is_staff = False
+            user.save()
+        except:
+            messages.error(request, "Something went wrong!")
+            return redirect('/signup')
+
+        u = authenticate(username=username, password=user_password)
+        auth_login(request, u)
+        return render(request, 'dashboard.html')
+
+    return redirect('/signup')

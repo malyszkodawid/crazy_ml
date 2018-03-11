@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block main %}
+
+    <div id="page" class="page-style" background-data-image="static/images/temp.jpeg">
+        <div class="pattern">
+            <div class="wrapper" style="z-index:2">
+                <div class="font-title">
+                    <h1 class="site-title">Sotonline</h1>
+                    <p class="alpha">alpha release 0.1</p>
+                </div>
+                <form class="login" method="post" action="/sign_up/">
+                    {% csrf_token %}
+                    <p class="title">Register</p>
+                    <input type="text" placeholder="Email" autofocus name="user" id="user-name"/>
+                    <i class="fa fa-at"></i>
+                    <input type="password" placeholder="Password" name="password"/>
+                    <i class="fa fa-key"></i>
+                    <input type="password" placeholder="Repeat password" name="password2"/>
+                    <i class="fa fa-key"></i>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p id="message_post" class="{{ message.tags }}">{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    <p id="message" class="error"></p>
+                    <button type="submit">
+                        <i class="spinner"></i>
+                        <span class="state">Sign up</span>
+                    </button>
+                </form>
+            </div>
+            <div id="loading" hidden style="z-index:3">
+                <img src="static/images/loading.gif" id="loader">
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/login.js' %}"></script>
+
+{% endblock %}
