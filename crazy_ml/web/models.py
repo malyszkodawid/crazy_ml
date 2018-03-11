@@ -38,7 +38,7 @@ class Profile(models.Model):
     customized = models.BooleanField(default=False)
     
     cluster = models.IntegerField(default=0)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, related_name='tags')
 
     nationality = models.CharField(max_length=30, blank=True)
     birth_date = models.DateField(null=True, blank=True)
@@ -59,6 +59,24 @@ class Profile(models.Model):
             return self.image.url
 
         return 'static/images/user.png'
+    
+    def similar_users(self):
+        users = User.objects.all()
+        return [w for w in users if w.profile.cluster == self.cluster]
+                   
+    def top_scores(self):
+        events_list = []
+        for event in Event.objects.all():
+            score = 0
+            score += event.prior 
+            for u in [v for v in User.objects.all() if self.cluster == v.profile.cluster]:
+                if Rating.objects.filter(Rating.user_id == u.profile, Rating.event_id == event.i_d).exists():
+                    score += Rating.objects.get(user_id = u.profile, event_id = event.i_d).rating * Similarity.objects.get(user1_id = self, user2_id = u.profile).similarity
+            events_list.append((score, event))
+        events_list.sort()
+        return [e for (s, e) in events_list]
+                        
+                
 
 
 @receiver(post_save, sender=User)
@@ -80,9 +98,16 @@ class Event(models.Model):
     organisers = models.CharField(max_length=250, blank=True)
     web_link = models.CharField(max_length=250, blank=True)
     tickets_link = models.CharField(max_length=250, blank=True)
+    prior = models.FloatField(default = 0, blank=True)
 
 
 class Rating(models.Model):
     user_id = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=True, null=True)
     event_id = models.ForeignKey(Event, on_delete=models.CASCADE, blank=True, null=True)
     rating = models.IntegerField(blank=False) 
+
+    
+class Similarity(models.Model):
+    user1_id = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=True, null=True, related_name = 'user1_id')
+    user2_id = models.ForeignKey(Profile, on_delete=models.CASCADE, blank=True, null=True, related_name = 'user2_id')
+    similarity = models.FloatField(default = 0, blank = True, null = True)

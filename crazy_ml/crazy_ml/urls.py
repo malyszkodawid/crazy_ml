@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from web import views
+from web import updater
 from web import user
 
 urlpatterns = [
@@ -27,12 +28,15 @@ urlpatterns = [
     url(r'^change_password/$', views.change_password, name='password_change'),
     url(r'^info/$', views.index, name='info'),
     url(r'^descriptions/$', views.descriptions, name='descriptions'),
+    url(r'^update_clusters/$', updater.update_clusters, name='update_clusters'),
     url(r'^calendar/$', views.calendar, name='calendar'),
 
     url(r'^signup/$', views.signup, name='signup'),
 
     url(r'^write_json/$', views.write_json, name='write_json'),
     url(r'^make_users/$', views.make_users, name='make_users'),
+    url(r'^make_ratings/$', views.make_ratings, name='make_rating'),
+    
 
     url(r'^sign_up/$', user.sign_up, name='login'),
     url(r'^login/$', user.login, name='login'),

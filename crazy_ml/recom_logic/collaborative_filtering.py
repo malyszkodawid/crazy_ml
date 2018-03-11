@@ -1,5 +1,3 @@
-
-
 def pearson_correlation(x, y):
 
 	x = (x - np.mean(x)) / np.std(x)

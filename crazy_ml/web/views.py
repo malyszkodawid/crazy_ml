@@ -143,6 +143,31 @@ def write_json(requests):
 @login_required()
 @csrf_exempt
 def make_users(request):
+
+    
+    u = User(username = 'Niranjan')
+    u.save()
+    user_profile = u.profile  
+    for tag_name in ['talk', 'movie', 'food', 'on_campus']:
+        tag = Tag.objects.get(tag=tag_name)
+        user_profile.tags.add(tag)
+    user_profile.save()
+    
+    u = User(username = 'Tolis')
+    u.save()
+    user_profile = u.profile  
+    for tag_name in ['talk', 'play', 'societies', 'movie', 'free']:
+        tag = Tag.objects.get(tag=tag_name)
+        user_profile.tags.add(tag)
+    user_profile.save()
+    
+    u = User(username = 'Christian')
+    u.save()
+    user_profile = u.profile  
+    for tag_name in ['talk', 'free', 'societies', 'dance', 'alcohol', 'food']:
+        tag = Tag.objects.get(tag=tag_name)
+        user_profile.tags.add(tag)
+    user_profile.save()
     
     u = User(username = 'Yustina')
     u.save()
@@ -176,3 +201,52 @@ def make_users(request):
         user_profile.tags.add(tag)
     user_profile.save()
     
+    
+@login_required()
+@csrf_exempt
+def make_ratings(request):
+    
+    u = User.objects.get(username = 'Yustina').profile
+    e = Event.objects.filter(i_d = '0')[0]
+    r = Rating(user_id = u, event_id = e, rating = 10)
+    r.save()
+    
+    u = User.objects.get(username = 'Yustina').profile
+    e = Event.objects.filter(i_d = '4')[0]
+    r = Rating(user_id = u, event_id = e, rating = 5)
+    r.save()
+    
+    u = User.objects.get(username = 'Yustina').profile
+    e = Event.objects.filter(i_d = '12')[0]
+    r = Rating(user_id = u, event_id = e, rating = 2)
+    r.save()
+    
+    u = User.objects.get(username = 'Yustina').profile
+    e = Event.objects.filter(i_d = '26')[0]
+    r = Rating(user_id = u, event_id = e, rating = -10)
+    r.save()
+    
+    u = User.objects.get(username = 'Niranjan').profile
+    e = Event.objects.filter(i_d = '30')[0]
+    r = Rating(user_id = u, event_id = e, rating = 10)
+    r.save()
+    
+    u = User.objects.get(username = 'Niranjan').profile
+    e = Event.objects.filter(i_d = '20')[0]
+    r = Rating(user_id = u, event_id = e, rating = 5)
+    r.save()
+    
+    u = User.objects.get(username = 'Niranjan').profile
+    e = Event.objects.filter(i_d = '11')[0]
+    r = Rating(user_id = u, event_id = e, rating = -10)
+    r.save()
+    
+    u = User.objects.get(username = 'Tolis').profile
+    e = Event.objects.filter(i_d = '20')[0]
+    r = Rating(user_id = u, event_id = e, rating = 10)
+    r.save()
+    
+    u = User.objects.get(username = 'Tolis').profile
+    e = Event.objects.filter(i_d = '32')[0]
+    r = Rating(user_id = u, event_id = e, rating = -10)
+    r.save()  
