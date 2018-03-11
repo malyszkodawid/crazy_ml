@@ -1,9 +1,5 @@
 
 
-def update_prior_tags():
-	pass
-
-
 def update_prior_event():
 	pass
 
@@ -17,7 +13,6 @@ def update_event_ratings():
 
 
 def update_24():
-	update_prior_tags()
 	update_user_similarities()
 
 
