@@ -12,10 +12,83 @@
         <div class="row">
         <!-- /.col -->
         <div class="col-md-12">
-            {{ user.id }}
+            <div class="panel panel-default">
+  <div class="panel-heading">  <h4 >User Profile</h4></div>
+   <div class="panel-body">
+
+    <div class="box box-info">
+
+            <div class="box-body">
+                     <div class="col-sm-6">
+                     <div  align="center"> <img style="height:40%" alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive">
+
+
+
+
+
+
+
+                     </div>
+
+              <br>
+
+              <!-- /input-group -->
+            </div>
+            <div class="col-sm-6">
+            <h4 style="color:#00b1b1;">{{ user_data.get_full_name|default:user_data.username }} </h4></span>
+              <span><p>{% if user_data.is_superuser %}Admin{% else %}Student{% endif %}</p></span>
+            </div>
+            <div class="clearfix"></div>
+            <hr style="margin:5px 0 5px 0;">
+
+
+<div class="col-sm-5 col-xs-6 tital " >First Name:</div><div class="col-sm-7 col-xs-6 ">{{user_data.name}}</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Surname:</div><div class="col-sm-7">{{user_data.surname}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Gender:</div><div class="col-sm-7"> {% if user_profile.is_male %}Male{% else %}Female{% endif %}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Date Of Joining:</div><div class="col-sm-7">{{user_profile.date_joined}}</div>
+
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Date Of Birth:</div><div class="col-sm-7">{{user_profile.birth_date}}</div>
+
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Country:</div><div class="col-sm-7">{{user_profile.nationality}}</div>
+
+ <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Favourite Tags:</div><div class="col-sm-7">{{user_profile.tags}}</div>
+
+ <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >School:</div><div class="col-sm-7">{{user_profile.school.name}}</div>
+
+
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+
+
+    </div>
+    </div>
+</div>
         </div>
         <!-- /.col -->
-      </div>
     </section>
     <!-- /.content -->
   </div>

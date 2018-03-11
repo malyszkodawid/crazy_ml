@@ -18,8 +18,8 @@ def index(request):
 @login_required()
 @csrf_exempt
 def dashboard(request):
-    #if not request.user.profile.customized:
-    #    return info(request)
+    if not request.user.profile.customized:
+        return info(request)
 
     data = dict()
 
@@ -60,7 +60,12 @@ def descriptions(request):
 @login_required()
 @csrf_exempt
 def info(request):
-    return render(request, 'questionnaire.html', )
+
+    data = dict()
+
+    data['tags'] = Tag.objects.all()
+
+    return render(request, 'questionnaire.html', data)
 
 
 @login_required()
@@ -89,7 +94,8 @@ def event(request, event_id):
 @csrf_exempt
 def person(request, person_name):
     data = {}
-    data['user'] = User.objects.get(username=person_name).profile
+    data['user_data'] = User.objects.get(username=person_name)
+    data['user_profile'] = User.objects.get(username=person_name).profile
 
     return render(request, 'user.html', data)
 
@@ -97,8 +103,10 @@ def person(request, person_name):
 @login_required()
 @csrf_exempt
 def write_json(requests):
+    import os.path
     print(settings.STATICFILES_DIRS)
-    path = os.path.join('..', settings.STATICFILES_DIRS[0],'data')
+    path = os.path.join('..', settings.STATICFILES_DIRS[0], 'data')
+    print(settings.PROJECT_DIR)
     for file in os.listdir(path):
         if file.endswith('.json'):
             json_data = json.load(open(os.path.join(path,file)))
@@ -113,8 +121,20 @@ def write_json(requests):
                 if not Category.objects.filter(category=ctg_name).exists():
                     c = Category(category=ctg_name)
                     c.save()
-            
 
+            photos_path = os.path.join(settings.STATICFILES_DIRS[0], 'photos/')
+
+            filename = '%03d.png' % event['id']
+
+            print(photos_path + filename)
+            if not os.path.exists(photos_path + filename):
+
+                filename = '%03d.jpg' % event['id']
+
+                if not os.path.exists(photos_path + filename):
+                    filename ='temp.jpg'
+
+            print(filename)
             e = Event(i_d = event['id'],
                       title = event['title'],
                       description = event['description'], 
@@ -123,10 +143,11 @@ def write_json(requests):
                       place = event['place'],
                       organisers = event['organisers'],
                       web_link = event['web_link'],
-                      tickets_link = event['tickets_link'])
-            
+                      tickets_link = event['tickets_link'],
+                      photos = 'static/photos/%s' % filename)
+
             e.save()
-            
+
             for tag_name in event['tags']:
                 
                 t = Tag.objects.get(tag=tag_name)

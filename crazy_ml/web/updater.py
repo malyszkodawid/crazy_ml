@@ -7,6 +7,7 @@ from sklearn.cluster import KMeans
 import numpy as np
 
 
+<<<<<<< HEAD
 tag_dict = {
         'on_campus' : 0,
         'city_centre' : 1,
@@ -89,6 +90,10 @@ def update_similarities():
             sim = pearson_correlation(np.asarray(list_u), np.asarray(list_v))
             S = Similarity(user1_id = u.profile, user2_id=v.profile, similarity=sim)   
             S.save()
+=======
+def update_prior_event():
+	pass
+>>>>>>> d44b29b3c7424e648c2e94943d631da8bc62e285
 
 # new function with events
     # events = list of events
@@ -142,8 +147,12 @@ def update_event_ratings():
 
 
 def update_24():
+<<<<<<< HEAD
 	 update_prior_tags()
 	 update_user_similarities()
+=======
+	update_user_similarities()
+>>>>>>> d44b29b3c7424e648c2e94943d631da8bc62e285
 
 
 def update_1():

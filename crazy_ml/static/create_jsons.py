@@ -580,60 +580,286 @@ create_event(
 	tickets_link = ''
 	)
 
-# create_event(
-# 	id = ,
-# 	title = '',
-# 	description = "",
-# 	category = [],
-# 	tags = [],
-# 	start_date = '17-02-2018 09:00',
-# 	end_date = '17-02-2018 10:00',
-# 	place = '',
-# 	organisers = [''],
-# 	web_link = '',
-# 	tickets_link = ''
-# 	)
+create_event(
+	id = 36 ,
+	title = 'Karaoke',
+	description = "Tuesday Karaoke Night. Sad that you missed out\
+    last week because of the Beast from the East? We're hosting a special Karaoke TONIGHT.",
+	category = ['party'],
+	tags = ['on_campus', 'alcohol', 'dance', 'free', 'susu'],
+	start_date = '06-03-2018 20:00',
+	end_date = '07-03-2018 01:00',
+	place = 'The Stags',
+	organisers = ['SUSU'],
+	web_link = '',
+	tickets_link = ''
+	)
 
-# create_event(
-# 	id = ,
-# 	title = '',
-# 	description = "",
-# 	category = [],
-# 	tags = [],
-# 	start_date = '17-02-2018 09:00',
-# 	end_date = '17-02-2018 10:00',
-# 	place = '',
-# 	organisers = [''],
-# 	web_link = '',
-# 	tickets_link = ''
-# 	)
+create_event(
+	id = 37 ,
+	title = 'Farmers Market',
+	description = "Stock up on delicious fruit and vegetables at our weekly Farmers Market on the Redbrick.",
+	category = ['food'],
+	tags = ['on_campus', 'susu', 'food'],
+	start_date = '05-03-2018 09:00',
+	end_date = '05-03-2018 16:00',
+	place = 'Red Brick Area',
+	organisers = ['SUSU'],
+	web_link = '',
+	tickets_link = ''
+	)
 
-# create_event(
-# 	id = ,
-# 	title = '',
-# 	description = "",
-# 	category = [],
-# 	tags = [],
-# 	start_date = '17-02-2018 09:00',
-# 	end_date = '17-02-2018 10:00',
-# 	place = '',
-# 	organisers = [''],
-# 	web_link = '',
-# 	tickets_link = ''
-# 	)
+create_event(
+	id = 38 ,
+	title = 'Skepticism Series: Michael Marshall | Pseudoscience',
+	description = "Join us for an evening with Michael Marshall, of the Good\
+    Thinking Society, Merseyside Skeptics and more, as he presents a talk titled\
+    Lifting The Lid: Ongoing Adventures in Pseudoscience. The talk will begin at 7.30pm.\
+    It’s easy to think of pseudoscience existing in a glass case at a museum – something\
+    to be examined and critiqued from a safe distance, but not something to touch and to play\
+    with. Using examples taken from his own personal experiences in skepticism, Michael Marshall\
+    will show what happens when you begin to crack the surface of the pseudosciences that surround\
+    us – revealing the surprising, sometimes-shocking and often-comic adventures that lie beneath.\
+    Michael Marshall is the Project Director of the Good Thinking Society and the Vice President of\
+    the Merseyside Skeptics Society. He regularly speaks with proponents of pseudoscience for the Be\
+    Reasonable podcast. His work has seen him organising international homeopathy protests and co-founding\
+    the popular QED conference. He has written for the Guardian, The Times and New Statesman.",
+	category = ['academic'],
+	tags = ['on_campus', 'talk', 'societies', 'free'],
+	start_date = '05-03-2018 19:00',
+	end_date = '05-03-2018 21:00',
+	place = '06.1081 (Nuffield Theatre, Lecture Theatre B)',
+	organisers = ['Humanist Students Southampton Group'],
+	web_link = '',
+	tickets_link = ''
+	)
 
-# create_event(
-# 	id = ,
-# 	title = '',
-# 	description = "",
-# 	category = [],
-# 	tags = [],
-# 	start_date = '17-02-2018 09:00',
-# 	end_date = '17-02-2018 10:00',
-# 	place = '',
-# 	organisers = [''],
-# 	web_link = '',
-# 	tickets_link = ''
-# 	)
+create_event(
+	id = 39 ,
+	title = 'SSAGO: Student Scouts And Guides Organisation',
+	description = "If you have ever been involved in either Scouts or Guides,\
+    or just like spending time outdoors and want to try something different,\
+    then SSAGO is the place for you! Join us for a drink every Monday in the Crown\
+    and see what we get up to during the year. We would love to meet you! If the idea\
+    of exciting themed camps, fire, fun activities, and a great set of socials appeals\
+    to you then come along and meet lovely (and maybe slightly crazy) people at Southampton\
+    SSAGO! Get involved in activities like archery, climbing and zorbing, trips around the UK,\
+    as well as camps and socials with other SSAGO members all over the country... and that's just the start!",
+	category = ['hobbies'],
+	tags = ['on_campus', 'alcohol', 'societies'],
+	start_date = '05-03-2018 20:00',
+	end_date = '05-03-2018 23:00',
+	place = 'The Crown Inn, Highfield',
+	organisers = ['Student Scout And Guide Organisation Group'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 40 ,
+	title = 'Sunday Hop',
+	description = "Sunday Hop is a weekly social for the Southampton Swing Dancers.\
+    This is a great place for social dancing, having a drink, and meeting new people.\
+    There’s no formal class, but we’re happy to show you some basic steps if you’re new\
+    to lindy hop. Bring your friends – there is nothing better than moving to swing music on a Sunday.",
+	category = ['hobbies'],
+	tags = ['city_center', 'alcohol', 'societies',  'dance'],
+	start_date = '04-03-2018 18:30',
+	end_date = '04-03-2018 20:00',
+	place = 'The Shooting Star, 40-42 Bevois Valley Road, SO14',
+	organisers = ['Southampton Swing Dancers Group'],
+	web_link = 'https://www.facebook.com/SouthamptonSwingDancers/',
+	tickets_link = ''
+	)
 
 
+create_event(
+	id = 41 ,
+	title = 'SUSingers Rehearsals',
+	description = "Join us for the Southampton University Singers' for\
+    our weekly rehearsal! We are a friendly non-auditioned choir with the\
+    university's most varied choir repertoire - from traditional to modern\
+    - and we welcome anyone who loves singing, regardless of previous experience.\
+    We rehearse every Sunday 6:45-9 pm in 02/1083!",
+	category = ['hobbies'],
+	tags = ['on_campus',  'societies',  'sing'],
+	start_date = '04-03-2018 18:45',
+	end_date = '04-03-2018 21:00',
+	place = '02/1083',
+	organisers = ['SUSingers Group'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 42 ,
+	title = 'Karate-do Shotokai',
+	description = "Come along to our informal practice sessions to learn self defence and keep fit!",
+	category = ['hobbies', 'sports'],
+	tags = ['on_campus', 'societies'],
+	start_date = '03-03-2018 09:00',
+	end_date = '03-03-2018 11:00',
+	place = 'Activities Room, Union Building (42)',
+	organisers = ['Karate-Do Shotokai Group'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 43 ,
+	title = 'Live Music Society Weekly Jam session',
+	description = "Join us for our free weekly jam sessions! It's an\
+    open jam, so feel free to turn up, and play, sing, or simply watch.\
+    We provide a relaxed and engaging environment for musicians of any genre\
+    and ability to enjoy playing music. Songs, solos, or improvised jams! Stags afterwards...",
+	category = ['hobbies'],
+	tags = ['on_campus', 'societies', 'free', 'alcohol'],
+	start_date = '03-03-2018 15:00',
+	end_date = '03-03-2018 18:00',
+	place = 'Clubs & Socs Room',
+	organisers = ['Live Music Society Group'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 44 ,
+	title = 'Girls Night In: Part 2',
+	description = "A cozy ladies' night in with special guest Pearl Kasi!\
+    The topic for the night is self love and focuses on learning how to deal\
+    with the past and letting go of pain. Join us for a snug night in and a chance\
+    to mingle, confront our demons and conquer our issues",
+	category = ['hobbies'],
+	tags = ['city_center', 'societies', 'talk'],
+	start_date = '02-03-2018 19:00',
+	end_date = '02-03-2018 21:00',
+	place = 'Hampton Square',
+	organisers = ['Women of Colour Society Group'],
+	web_link = 'https://www.wocsoc.co.uk/',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 45 ,
+	title = 'University Mental Health Day Chill Out Space',
+	description = "Take some time for yourself this University Mental Health Day!\
+    We will have mindful colouring, friendship bracelet making, bubbles, drinks and snacks in Meeting Room 5.",
+	category = ['hobbies'],
+	tags = ['on_campus', 'societies', 'free', 'food', 'alcohol', 'susu'],
+	start_date = '01-03-2018 10:00',
+	end_date = '01-03-2018 17:00',
+	place = 'Meeting Room 5',
+	organisers = ['SUSU'],
+	web_link = '',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 46 ,
+	title = 'Mentor Masterclass Jan Ward',
+	description = "‘How to start an international business from your bedroom.’\
+    Join Future Worlds’ Mentor Jan Ward, CBE, for March’s Masterclass talk.\
+    Jan has been celebrated as a female entrepreneur throughout her career,\
+    she was named the ‘UK’s most inspirational female entrepreneur‘ and won the\
+    coveted NatWest Everywoman Award. Jan’s business career had a humble start,\
+    having left school at 15 with no qualifications, however her passion for engineering\
+    started when she undertook a trainee role at a local metal supply and distribution company.\
+    After working her way up and developing strong international connections in markets such as\
+    the Middle East, she decided to start an engineering company herself, from her front room.\
+    22 years later her company, Corrotherm International, has a great international reputation\
+    with offices currently in 8 countries around the world.\
+    In this talk Jan will share stories from her fascinating career and offer advice for anyone hoping\
+    to do the same.\
+    The Future Worlds Mentor Masterclass series allows students and staff at the University of Southampton\
+    exclusive access to learn from entrepreneurs and industry experts as well as an exclusive opportunity\
+    to see pitches and product demos from startups and spinouts in the Future Worlds network.",
+	category = ['academic'],
+	tags = ['on_campus', 'free', 'food', 'talk'],
+	start_date = '07-03-2018 12:30',
+	end_date = '07-03-2018 14:00',
+	place = 'Foyer, Turner Sims',
+	organisers = ['Future Worlds'],
+	web_link = 'https://www.facebook.com/events/216398882243721/',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 47 ,
+	title = 'Christmas Lights 2017',
+	description = "Join the University and the Students' Union as we switch on our\
+    Christmas Lights on Tuesday 21 November 2017. Come together with your friends and\
+    the University community as we enjoy a Christmas market, carols and a glass of mulled\
+    wine, mulled cider or a festive soft drink! Register now to receive a complimentary drink. Timings:\
+    From 16:00 - Visit the Christmas market around the crescent area for gifts and festive\
+    foods| 16:30 - Enjoy Christmas carols performed by our brass band | 18:00 - Christmas Lights\
+    Switch On from the balcony of B40 | 18:10 - Live music until late in The Stag's & The Bridge | Further\
+    Info: This event is for staff and students of the University of Southampton only. Due to expected\
+    large numbers we cannot allow children to attend this event and you will be turned away on arrival.\
+    Our Family Christmas event will take place on the afternoon of Monday 11 December, and is specifically\
+    for children, further details will soon be on SUSSED. If you have pre-registered for a complimentary\
+    drink please have your QR code available (either printed or on your to view on your phone) to exchange\
+    for a drinks token. This can be done on the day from 16:00, at one of the drinks outlets (The Bridge,\
+    The Stag's or one of the outside bars). There will a selection of both alcoholic and non-alcoholic drinks\
+    available. Please note that the complimentary drink is limited to one per person (either mulled wine, mulled\
+    cider or a soft drink). Tickets will be scanned in exchange for each drink. You may be asked to show your\
+    University ID so please ensure you have this to hand. This event is outside so please wear appropriate\
+    footwear and warm clothing.",
+	category = ['party', 'hobbies'],
+	tags = ['on_campus', 'alcohol', 'sing', 'dance', 'free'],
+	start_date = '21-11-2017 16:00',
+	end_date = '22-11-2017 01:00',
+	place = 'University of Southampton, Highfield Campus',
+	organisers = ['University of Southampton - Student Communications'],
+	web_link = 'https://www.facebook.com/events/280374559138828/',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 48 ,
+	title = 'Full Band Open Mic/Jam',
+	description = "As part of this years Culture Festival, we're running a jam style\
+    open mic in the Bridge. Slots are 15 minutes and will be available first come first\
+    serve on the night. A full backline of drums, guitar/bass amps, keyboards and mics\
+    are provided, but feel free to bring your own instruments! All instruments are welcome.\
+    The house band will be the fantastic LiveSoc committee who will try to cater to any songs\
+    or jam ideas.",
+	category = ['party', 'hobbies'],
+	tags = ['on_campus', 'alcohol', 'sing', 'dance', 'free','susu'],
+	start_date = '09-03-2017 19:00',
+	end_date = '09-03-2017 23:00',
+	place = 'The Bridge',
+	organisers = ['SUSU','University of Southampton Live Music Society - Livesoc'],
+	web_link = 'https://www.facebook.com/events/581116465557572/',
+	tickets_link = ''
+	)
+
+create_event(
+	id = 49 ,
+	title = 'Movie: Black Panther',
+	description = "T'Challa, the new ruler of the advanced kingdom of Wakanda,\
+    must defend his land from being torn apart by enemies from outside and inside the country.",
+	category = ['hobbies'],
+	tags = ['on_campus', 'movie','susu'],
+	start_date = '11-03-2017 14:30',
+	end_date = '',
+	place = 'Union Films',
+	organisers = ['SUSU'],
+	web_link = 'https://www.unionfilms.org/films/reviews/black-panther.html',
+	tickets_link = 'http://boxoffice.susu.org/view/26/union-films'
+	)
+
+create_event(
+	id = 50 ,
+	title = 'Movie: Paddington 2',
+	description = "Paddington, now happily settled with the Brown family and a popular member of the\
+    local community, picks up a series of odd jobs to buy the perfect present for his Aunt Lucy's\
+    100th birthday, only for the gift to be stolen.",
+	category = ['hobbies'],
+	tags = ['on_campus', 'movie','susu'],
+	start_date = '13-03-2017 19:30',
+	end_date = '',
+	place = 'Union Films',
+	organisers = ['SUSU'],
+	web_link = 'https://www.unionfilms.org/films/reviews/paddington-2.html',
+	tickets_link = 'http://boxoffice.susu.org/view/26/union-films'
+	)

@@ -99,6 +99,7 @@ class Event(models.Model):
     web_link = models.CharField(max_length=250, blank=True)
     tickets_link = models.CharField(max_length=250, blank=True)
     prior = models.FloatField(default = 0, blank=True)
+    photos = models.CharField(max_length=250, blank=True)
 
 
 class Rating(models.Model):

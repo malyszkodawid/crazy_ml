@@ -42,6 +42,7 @@ urlpatterns = [
     url(r'^login/$', user.login, name='login'),
     url(r'^retrieve_password/$', user.retrieve_password, name='password'),
     url(r'^password/$', user.password, name='password_change_post'),
+    url(r'^update_user/$', user.update_user, name='update_user'),
 
 
     url('^events/$', views.events, name='events'),
